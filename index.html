@@ -2,131 +2,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iron Companies - Ironscript</title>
+  <title>Iron Companies</title>
   <style>
     body {
-      background: #0d0d0d;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00ccff;
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Courier New', Courier, monospace;
       margin: 0;
+      padding: 0;
     }
     header {
-      background: #111;
+      background-color: #111;
       padding: 20px;
       text-align: center;
       font-size: 2em;
-      border-bottom: 3px solid #00ccff;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      background: #1a1a1a;
-      border-bottom: 2px solid #00ccff;
-    }
-    nav a {
-      color: #00ccff;
-      text-decoration: none;
       font-weight: bold;
+      border-bottom: 2px solid #0ff;
     }
-    .tile-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 30px;
+      padding: 20px;
     }
     .tile {
-      background: #1a1a1a;
+      background-color: #111;
+      border: 1px solid #0ff;
       padding: 20px;
-      border: 2px solid #00ccff;
       border-radius: 10px;
-      box-shadow: 0 0 20px #00ccff44;
+      transition: transform 0.3s ease;
     }
-    .interpreter {
-      background: #111;
-      padding: 20px;
-      border-top: 2px solid #00ccff;
+    .tile:hover {
+      transform: scale(1.05);
     }
-    textarea, pre {
+    textarea {
       width: 100%;
+      height: 150px;
       background: #000;
       color: #0ff;
-      border: 2px solid #00ccff;
-      padding: 10px;
+      border: 1px solid #0ff;
       font-family: monospace;
-      border-radius: 6px;
-      font-size: 1em;
+      padding: 10px;
     }
     button {
-      background: #00ccff;
+      background-color: #0ff;
       color: #000;
-      font-weight: bold;
-      padding: 10px 20px;
       border: none;
-      border-radius: 8px;
+      padding: 10px 20px;
       cursor: pointer;
       margin-top: 10px;
+    }
+    #output {
+      background: #111;
+      color: #0ff;
+      padding: 10px;
+      border: 1px solid #0ff;
+      min-height: 100px;
+      margin-top: 10px;
+      white-space: pre-wrap;
     }
   </style>
 </head>
 <body>
-  <header>Iron Companies</header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#learn">Learn Ironscript</a>
-    <a href="#interpreter">Try Ironscript</a>
-  </nav>  <section id="home" class="tile-grid">
+  <header>Iron Companies</header>  <div class="grid">
     <div class="tile">
-      <h2>What is Ironscript?</h2>
-      <p>Ironscript is a futuristic interpreted system programming language designed for full control, blazing speed, and platform-level hacking power. Built by Iron Companies for the future of devs.</p>
-    </div>
-    <div class="tile">
-      <h2>Use Cases</h2>
-      <ul>
-        <li>System-level programming</li>
-        <li>AI architecture (e.g. Diety)</li>
-        <li>Emulators</li>
-        <li>Terminal-based software</li>
-        <li>Low-level automation</li>
-      </ul>
-    </div>
-  </section>  <section id="learn" class="tile-grid">
-    <div class="tile">
-      <h2>Variables</h2>
-      <pre>let speed = 50</pre>
-    </div>
-    <div class="tile">
-      <h2>Input + Output</h2>
-      <pre>let name = input("What's your name?")
-print("Welcome, " + name)</pre>
-    </div>
-    <div class="tile">
-      <h2>Functions</h2>
-      <pre>func add(x, y):
-    return x + yprint(add(5, 3))</pre> </div> <div class="tile"> <h2>Conditionals</h2> <pre>if x > 10: print("Big") else: print("Small")</pre> </div> <div class="tile"> <h2>Loops</h2> <pre>let i = 0 while i < 5: print(i) i = i + 1</pre> </div>
+      <h2>Technologies</h2>
+      <p>Ironscript, IronOS, Diety AI, Iron Web UI, Holographic AI.</p>
+    </div><div class="tile">
+  <h2>Join Iron Companies</h2>
+  <p>Work with us and earn Iron Credits. Credits are converted to real money yearly.</p>
+</div>
 
-  </section>  <section id="interpreter" class="interpreter">
-    <h2>Try Ironscript</h2>
-    <textarea id="code" rows="8">print("Hello from Ironscript")</textarea>
-    <button onclick="runCode()">Run Code ▶️</button>
-    <pre id="output"></pre>
-  </section>  <script>
-    function runCode() {
+<div class="tile">
+  <h2>Learn Ironscript</h2>
+  <p>Use the interpreter below to test Ironscript code.</p>
+  <textarea id="code">let x = 5
+
+print x </textarea> <button onclick="runIronscript()">▶️ Run</button> <div id="output"></div> </div>
+
+<div class="tile">
+  <h2>Advanced Tutorials</h2>
+  <p><strong>Functions:</strong><br>func say() print "Hi"</p>
+  <p><strong>Loops:</strong><br>let i = 0
+
+while i < 5 print i let i = i + 1</p> <p><strong>Conditions:</strong><br>let a = 10 if a > 5 print "Big"</p> </div>
+
+  </div>  <script>
+    function runIronscript() {
       const code = document.getElementById("code").value;
       const output = document.getElementById("output");
-
-      // Ironscript interpreter simulation (mock)
-      if (code.includes("print")) {
-        const result = code.match(/print(.*?)/);
-        if (result) {
-          output.textContent = eval(result[1]);
-        } else {
-          output.textContent = "[Error] Invalid print command";
+      const lines = code.split("\n");
+      let env = {};
+      let result = "";
+      for (let line of lines) {
+        line = line.trim();
+        if (line.startsWith("let ")) {
+          const parts = line.slice(4).split("=");
+          const key = parts[0].trim();
+          const val = eval(parts[1].trim());
+          env[key] = val;
+        } else if (line.startsWith("print ")) {
+          const val = line.slice(6).trim();
+          result += (env[val] !== undefined ? env[val] : val.replaceAll('"','')) + "\n";
         }
-      } else {
-        output.textContent = "[Interpreter] Ironscript only supports print simulation here.";
       }
+      output.innerText = result;
     }
   </script></body>
 </html>
