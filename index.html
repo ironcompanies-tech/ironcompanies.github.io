@@ -1,114 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Iron Companies</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(ellipse at top, #0f0f0f, #000);
-      font-family: 'Orbitron', sans-serif;
-      color: #00f7ff;
+      background-color: #111;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
-      min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      min-height: 100vh;
     }
-
-    h1 {
-      font-size: 3rem;
-      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
-      margin-bottom: 10px;
+    header {
+      padding: 30px 10px;
+      background-color: #1a1a1a;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-      text-shadow: 0 0 5px #007a99;
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #00ffc8;
     }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 800px;
-      text-align: left;
-    }
-
-    li {
-      font-size: 1rem;
-      color: #bbb;
-      background: rgba(255, 255, 255, 0.05);
-      border-left: 4px solid #00f7ff;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00f7ff22;
-      text-shadow: 0 0 3px #005566;
-    }
-
     .section {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid #00f7ff44;
-      border-radius: 20px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0 0 10px #00f7ff22;
-      max-width: 900px;
-      backdrop-filter: blur(10px);
+      padding: 40px 20px;
+      max-width: 800px;
     }
-
     h2 {
-      color: #00f7ff;
-      font-size: 2rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px #00f7ff;
+      color: #00ffc8;
     }
-
-    a.join-link {
-      color: #00f7ff;
-      text-decoration: underline;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 10px;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
-
-    footer {
+    .button {
       margin-top: 40px;
-      font-size: 0.8rem;
-      color: #555;
+      background-color: #00ffc8;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #00e0b3;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      width: 100%;
+      font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <h1>Iron Companies</h1>
-  <p><strong>Founder:</strong> Morris Arthur</p>
-  <p><em>“Code. Create. Control.”</em></p>
+  <header>
+    <h1>Iron Companies</h1>
+  </header>
 
   <div class="section">
-    <h2>🚀 Technologies</h2>
-    <ul>
-      <li><strong>🧠 Deity AI</strong> – A smart assistant that can think, remember, and help you control systems or programs like a real brain.</li>
-      <li><strong>🕶️ Holographic AI</strong> – An AI designed to talk and interact like a real person, and one day, show up as a hologram.</li>
-      <li><strong>⚙️ Ironscript</strong> – A powerful programming language made for speed and power. It’s how Iron Companies builds tools and AI.</li>
-      <li><strong>💽 Codex Obscura</strong> – A secret system that stores powerful code and hidden ideas for future inventions. Mysterious and locked down.</li>
-      <li><strong>🖥️ Iron OS</strong> – A futuristic operating system designed by Iron Companies to run custom tools, AI, and developer environments. Built to power innovation and control.</li>
-    </ul>
+    <h2>Welcome to Our Innovation Hub</h2>
+    <p>
+      Iron Companies is a technology-powered movement creating apps, AI systems,
+      games, tools, and futuristic software from the ground up. We're young,
+      ambitious, and ready to change the world one project at a time.
+    </p>
+
+    <a href="diety.html" class="button">⚡ Launch Diety AI</a>
   </div>
 
-  <div class="section">
-    <h2>💼 Join Iron Companies</h2>
-    <p>Join our mission to build the future. As a team member, you earn <strong>IRON Credits</strong> for helping with code, design, and ideas.</p>
-    <p>At the end of the year, IRON Credits are converted into real money and paid to all loyal members.</p>
-    <p>It’s not just a company — it’s a movement. Are you ready to build with us?</p>
-    <a href="mailto:morrarth5656@gmail.com" class="join-link">📧 Join Iron Companies Now</a>
-  </div>
-
-  <footer>© 2025 Iron Companies. Built by Morris Arthur. All rights reserved.</footer>
+  <footer>
+    &copy; 2025 Iron Companies | Built by Morris
+  </footer>
 </body>
 </html>
