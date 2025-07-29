@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diety AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      background: #1a1a1a;
+      color: #ffffff;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      resize: none;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00ffcc;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Diety AI - App Generator</h1>
+  
+  <textarea id="input"></textarea>
+  <br>
+  <button onclick="runDiety()">Create App</button>
+
+  <div id="output"></div>
+
+  <script>
+    function runDiety() {
+      const userInput = document.getElementById('input').value.trim();
+      const output = document.getElementById('output');
+      
+      if (!userInput) {
+        output.textContent = "Please describe your app idea to begin.";
+        return;
+      }
+
+      // Simulate AI Output
+      output.textContent = `Analyzing your app description...\n\n✅ Idea captured: ${userInput}\n\n🔧 Diety will generate:\n- Frontend: HTML/CSS/JS\n- Backend: Node.js (optional)\n- Downloadable build (coming soon)\n\nStay connected while we build the prototype...`;
+    }
+  </script>
+</body>
+</html>
