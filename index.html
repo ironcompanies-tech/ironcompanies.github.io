@@ -1,87 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iron Companies</title>
+  <link rel="icon" href="iron-logo.png" type="image/png">
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #e6e6e6;
       margin: 0;
       padding: 0;
-      background-color: #111;
-      color: #f2f2f2;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
     }
     header {
-      padding: 30px 10px;
-      background-color: #1a1a1a;
-      width: 100%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      color: #00ffc8;
+    header img {
+      height: 80px;
     }
-    .section {
-      padding: 40px 20px;
-      max-width: 800px;
+    h1, h2, h3 {
+      color: #00ffe1;
     }
-    h2 {
-      color: #00ffc8;
+    section {
+      padding: 30px;
     }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .button {
-      margin-top: 40px;
-      background-color: #00ffc8;
-      color: #000;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
+    a {
+      color: #00ffe1;
       text-decoration: none;
-      transition: background-color 0.3s ease;
     }
-    .button:hover {
-      background-color: #00e0b3;
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #222;
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: #00ffe1;
+    }
+    pre {
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
     }
     footer {
-      margin-top: auto;
+      background-color: #1e1e1e;
+      text-align: center;
       padding: 20px;
-      background-color: #1a1a1a;
-      width: 100%;
-      font-size: 0.9rem;
-      color: #aaa;
+      border-top: 2px solid #333;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="iron-logo.png" alt="Iron Companies Logo" />
     <h1>Iron Companies</h1>
-  </header>
+    <p>Innovating the future through Ironscript and technology</p>
+  </header>  <section>
+    <h2>Learn Ironscript</h2>
+    <p>Ironscript is a custom, Python-inspired interpreted language for general-purpose systems. Let's dive in!</p><h3>📌 Basics</h3>
+<pre><code># This is a comment
 
-  <div class="section">
-    <h2>Welcome to Our Innovation Hub</h2>
-    <p>
-      Iron Companies is a technology-powered movement creating apps, AI systems,
-      games, tools, and futuristic software from the ground up. We're young,
-      ambitious, and ready to change the world one project at a time.
-    </p>
+print "Hello World" </code></pre>
 
-    <a href="diety.html" class="button">⚡ Launch Diety AI</a>
-  </div>
+<h3>🔁 Loops</h3>
+<pre><code>repeat 5 times:
 
-  <footer>
-    &copy; 2025 Iron Companies | Built by Morris
+print "Looping" </code></pre>
+
+<h3>🧠 Variables</h3>
+<pre><code>set name to "Morris"
+
+print name </code></pre>
+
+<h3>📦 Lists</h3>
+<pre><code>set mylist to [1, 2, 3, 4]
+
+print mylist[2] </code></pre>
+
+<h3>🔍 If Statements</h3>
+<pre><code>set x to 5
+
+if x is greater than 3: print "Big" </code></pre>
+
+<h3>🔧 Functions</h3>
+<pre><code>define greet():
+
+print "Welcome!"
+
+greet() </code></pre>
+
+<h3>🔂 While Loops</h3>
+<pre><code>set count to 0
+
+while count is less than 3: print count set count to count + 1 </code></pre>
+
+<h3>🚀 Try It Yourself!</h3>
+<p>(Coming soon: built-in code editor for Ironscript on this site!)</p>
+
+  </section>  <footer>
+    <p>© 2025 Iron Companies. All rights reserved.</p>
+    <p><a href="#">Join Iron Companies</a></p>
   </footer>
 </body>
 </html>
