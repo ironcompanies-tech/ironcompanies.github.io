@@ -1,140 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iron Companies</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iron Companies - Ironscript</title>
   <style>
-    body { margin:0; padding:20px; background:#101010; color:#00e5ff; font-family: monospace; }
-    header { text-align:center; margin-bottom:30px; }
-    header h1 { font-size:2.5rem; margin:0; }
-    section { margin-bottom:50px; max-width:900px; margin-left:auto; margin-right:auto; text-align:left; }
-    h2 { color:#00e5ff; border-bottom:1px solid #00e5ff; padding-bottom:5px; }
-    ul { list-style:none; padding:0; }
-    ul li { margin:8px 0; }
-    a.join-link { display:inline-block; margin-top:10px; background:#00e5ff; color:#000; padding:8px 16px; border-radius:6px; text-decoration:none; font-weight:bold;}
-    textarea { width:100%; height:180px; background:#000; color:#0ff; border:2px solid #0ff; border-radius:6px; font-size:1rem; padding:10px; }
-    button { margin-top:10px; padding:8px 16px; background:#00e5ff; color:#000; border:none; border-radius:6px; font-weight:bold; cursor:pointer; }
-    #output { background:#000; color:#0ff; border:2px solid #0ff; padding:12px; border-radius:6px; min-height:120px; white-space:pre-wrap; margin-top:10px; }
-    code { background:#111; color:#0ff; padding:4px 8px; border-radius:4px; display:block; margin:10px 0; }
-    footer { text-align:center; margin-top:60px; font-size:0.9rem; color:#666; }
+    body {
+      background: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #00ccff;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      border-bottom: 3px solid #00ccff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: #1a1a1a;
+      border-bottom: 2px solid #00ccff;
+    }
+    nav a {
+      color: #00ccff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .tile {
+      background: #1a1a1a;
+      padding: 20px;
+      border: 2px solid #00ccff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ccff44;
+    }
+    .interpreter {
+      background: #111;
+      padding: 20px;
+      border-top: 2px solid #00ccff;
+    }
+    textarea, pre {
+      width: 100%;
+      background: #000;
+      color: #0ff;
+      border: 2px solid #00ccff;
+      padding: 10px;
+      font-family: monospace;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      background: #00ccff;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
+  <header>Iron Companies</header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#learn">Learn Ironscript</a>
+    <a href="#interpreter">Try Ironscript</a>
+  </nav>  <section id="home" class="tile-grid">
+    <div class="tile">
+      <h2>What is Ironscript?</h2>
+      <p>Ironscript is a futuristic interpreted system programming language designed for full control, blazing speed, and platform-level hacking power. Built by Iron Companies for the future of devs.</p>
+    </div>
+    <div class="tile">
+      <h2>Use Cases</h2>
+      <ul>
+        <li>System-level programming</li>
+        <li>AI architecture (e.g. Diety)</li>
+        <li>Emulators</li>
+        <li>Terminal-based software</li>
+        <li>Low-level automation</li>
+      </ul>
+    </div>
+  </section>  <section id="learn" class="tile-grid">
+    <div class="tile">
+      <h2>Variables</h2>
+      <pre>let speed = 50</pre>
+    </div>
+    <div class="tile">
+      <h2>Input + Output</h2>
+      <pre>let name = input("What's your name?")
+print("Welcome, " + name)</pre>
+    </div>
+    <div class="tile">
+      <h2>Functions</h2>
+      <pre>func add(x, y):
+    return x + yprint(add(5, 3))</pre> </div> <div class="tile"> <h2>Conditionals</h2> <pre>if x > 10: print("Big") else: print("Small")</pre> </div> <div class="tile"> <h2>Loops</h2> <pre>let i = 0 while i < 5: print(i) i = i + 1</pre> </div>
 
-  <header>
-    <h1>Iron Companies</h1>
-    <p>Founder: Morris Arthur</p>
-  </header>
+  </section>  <section id="interpreter" class="interpreter">
+    <h2>Try Ironscript</h2>
+    <textarea id="code" rows="8">print("Hello from Ironscript")</textarea>
+    <button onclick="runCode()">Run Code ▶️</button>
+    <pre id="output"></pre>
+  </section>  <script>
+    function runCode() {
+      const code = document.getElementById("code").value;
+      const output = document.getElementById("output");
 
-  <section>
-    <h2>Welcome to Iron Companies</h2>
-    <p>We build next-gen tech — from Ironscript to Iron OS and AI like Diety. Join us and help shape the future.</p>
-  </section>
-
-  <section>
-    <h2>🚀 Technologies</h2>
-    <ul>
-      <li><strong>🧠 Diety AI</strong> – Your personal smart assistant built in Ironscript.</li>
-      <li><strong>⚙️ Ironscript</strong> – A fast, custom scripting language we created.</li>
-      <li><strong>🖥️ Iron OS</strong> – The futuristic operating system powering our ecosystem.</li>
-      <li><strong>💽 Codex Obscura / Pop</strong> – Our secure system for private tools and secret projects.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>💼 Join Iron Companies</h2>
-    <p>Help build tools, code, or test game systems. Earn <strong>IRON Credits</strong> that become real rewards at year-end.</p>
-    <a href="mailto:morrarth5656@gmail.com" class="join-link">📧 Join Iron Companies Now</a>
-  </section>
-
-  <section>
-    <h2>Learn Ironscript — Live Interpreter</h2>
-    <p>Type Ironscript below and click <strong>Run</strong> to see it in action:</p>
-    <textarea id="code">// Example:
-set name to "Morris"
-print name
-repeat 3 times:
-  print "Iron Companies"</textarea>
-    <button onclick="runIronscript()">Run Code</button>
-    <div id="output"></div>
-  </section>
-
-<script>
-function runIronscript() {
-  const lines = document.getElementById('code').value.split('\n');
-  const vars = {};
-  const outputEl = document.getElementById('output');
-  outputEl.textContent = '';
-
-  for (let i = 0; i < lines.length; i++) {
-    const raw = lines[i].trim();
-    if (!raw) continue;
-
-    if (raw.startsWith('set ')) {
-      const [_, rest] = raw.split('set ');
-      const [key, val] = rest.split(' to ').map(s=>s.trim());
-      vars[key] = interpret(val, vars);
-    }
-    else if (raw.startsWith('print ')) {
-      const expr = raw.split('print ')[1];
-      outputEl.textContent += interpret(expr, vars) + '\n';
-    }
-    else if (raw.startsWith('repeat ')) {
-      const parts = raw.match(/repeat ([0-9]+) times:/);
-      if (parts) {
-        const times = parseInt(parts[1]);
-        const block = [];
-        i++;
-        while (i < lines.length && lines[i].startsWith('  ')) {
-          block.push(lines[i].trim());
-          i++;
+      // Ironscript interpreter simulation (mock)
+      if (code.includes("print")) {
+        const result = code.match(/print(.*?)/);
+        if (result) {
+          output.textContent = eval(result[1]);
+        } else {
+          output.textContent = "[Error] Invalid print command";
         }
-        i--;
-        for (let r = 0; r < times; r++) {
-          block.forEach(l => {
-            if (l.startsWith('print ')) {
-              outputEl.textContent += interpret(l.split('print ')[1], vars) + '\n';
-            } else if (l.startsWith('set ')) {
-              const [__, rr] = l.split('set ');
-              const [k,v] = rr.split(' to ').map(s=>s.trim());
-              vars[k] = interpret(v, vars);
-            }
-          });
-        }
+      } else {
+        output.textContent = "[Interpreter] Ironscript only supports print simulation here.";
       }
     }
-  }
-
-  function interpret(expr, vars) {
-    expr = expr.replace(/\"([^"]*)\"/, '$1');
-    Object.keys(vars).forEach(k => {
-      expr = expr.replace(new RegExp(`\\b${k}\\b`, 'g'), vars[k]);
-    });
-    const num = parseFloat(expr);
-    return isNaN(num) ? expr : num;
-  }
-}
-</script>
-
-  <section>
-    <h2>Advanced Ironscript Tutorials</h2>
-
-    <h3>🔍 Conditional Logic</h3>
-    <code>set x to 5<br>if x is greater than 3:<br>  print "Big"</code>
-
-    <h3>📎 Using Lists</h3>
-    <code>set mylist to [10, 20, 30]<br>print mylist[1]</code>
-
-    <h3>📣 Functions</h3>
-    <code>define greet():<br>  print "Hello!"<br>greet()</code>
-
-    <h3>🔄 While Loops</h3>
-    <code>set count to 0<br>while count is less than 3:<br>  print count<br>  set count to count + 1</code>
-  </section>
-
-  <footer>
-    &copy; 2025 Iron Companies | Built by Morris Arthur
-  </footer>
-</body>
+  </script></body>
 </html>
