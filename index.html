@@ -1,112 +1,174 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iron Companies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #0ff;
-      font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background-color: #111;
-      padding: 20px;
+      background: radial-gradient(ellipse at top, #0f0f0f, #000);
+      font-family: 'Orbitron', sans-serif;
+      color: #00f7ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
       text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      border-bottom: 2px solid #0ff;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
       padding: 20px;
     }
-    .tile {
-      background-color: #111;
-      border: 1px solid #0ff;
-      padding: 20px;
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-shadow: 0 0 5px #007a99;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    li {
+      font-size: 1rem;
+      color: #bbb;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #00f7ff;
+      margin: 10px 0;
+      padding: 15px;
       border-radius: 10px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px #00f7ff22;
+      text-shadow: 0 0 3px #005566;
     }
-    .tile:hover {
-      transform: scale(1.05);
+
+    .section {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #00f7ff44;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 0 10px #00f7ff22;
+      max-width: 900px;
+      backdrop-filter: blur(10px);
     }
-    textarea {
+
+    h2 {
+      color: #00f7ff;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    a.join-link {
+      color: #00f7ff;
+      text-decoration: underline;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    textarea, pre {
       width: 100%;
-      height: 150px;
-      background: #000;
-      color: #0ff;
-      border: 1px solid #0ff;
       font-family: monospace;
+      background: #111;
+      color: #0ff;
+      border: 1px solid #00f7ff44;
+      border-radius: 10px;
       padding: 10px;
+      box-shadow: 0 0 5px #00f7ff44;
+      margin-top: 10px;
     }
+
     button {
-      background-color: #0ff;
+      background: #00f7ff;
       color: #000;
       border: none;
       padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00f7ff99;
       cursor: pointer;
-      margin-top: 10px;
     }
-    #output {
-      background: #111;
-      color: #0ff;
-      padding: 10px;
-      border: 1px solid #0ff;
-      min-height: 100px;
-      margin-top: 10px;
-      white-space: pre-wrap;
+
+    button:hover {
+      background: #00aacc;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <header>Iron Companies</header>  <div class="grid">
-    <div class="tile">
-      <h2>Technologies</h2>
-      <p>Ironscript, IronOS, Diety AI, Iron Web UI, Holographic AI.</p>
-    </div><div class="tile">
-  <h2>Join Iron Companies</h2>
-  <p>Work with us and earn Iron Credits. Credits are converted to real money yearly.</p>
-</div>
+  <h1>Iron Companies</h1>
+  <p><strong>Founder:</strong> Morris Arthur</p>
+  <p><em>“Code. Create. Control.”</em></p>
 
-<div class="tile">
-  <h2>Learn Ironscript</h2>
-  <p>Use the interpreter below to test Ironscript code.</p>
-  <textarea id="code">let x = 5
+  <div class="section">
+    <h2>🚀 Technologies</h2>
+    <ul>
+      <li><strong>🧠 Diety AI</strong> – A smart assistant that can think, remember, and help you control systems or programs like a real brain.</li>
+      <li><strong>🕶️ Holographic AI</strong> – An AI designed to talk and interact like a real person, and one day, show up as a hologram.</li>
+      <li><strong>⚙️ Ironscript</strong> – Your own programming language made for speed and power. It’s how Iron Companies builds tools and AI.</li>
+      <li><strong>💽 Codex Obscura</strong> – A secret system that stores powerful code and hidden ideas for future inventions. Mysterious and locked down.</li>
+      <li><strong>🖥️ Iron OS</strong> – A futuristic operating system designed by Iron Companies to run custom tools, AI, and developer environments. Built to power innovation and control.</li>
+    </ul>
+  </div>
 
-print x </textarea> <button onclick="runIronscript()">▶️ Run</button> <div id="output"></div> </div>
+  <div class="section">
+    <h2>📚 Learn Ironscript</h2>
+    <p>Ironscript is a powerful system programming language created for building AI, apps, and OS tools. Here’s a quick look:</p>
+    
+    <ul>
+      <li><strong>🔹 Variables:</strong> `let speed = 10`</li>
+      <li><strong>🔹 Input/Output:</strong> `ask "What is your name?"`</li>
+      <li><strong>🔹 Loops:</strong> `repeat 5 times { say "Hi" }`</li>
+      <li><strong>🔹 Functions:</strong> `func greet(name) { say "Hello " + name }`</li>
+      <li><strong>🔹 System Access:</strong> `run "camera.open"`</li>
+    </ul>
 
-<div class="tile">
-  <h2>Advanced Tutorials</h2>
-  <p><strong>Functions:</strong><br>func say() print "Hi"</p>
-  <p><strong>Loops:</strong><br>let i = 0
+    <textarea id="ironscriptInput" rows="6">// Write Ironscript code here...</textarea>
+    <button onclick="runIronscript()">▶️ Run</button>
+    <pre id="ironscriptOutput">// Output will show here...</pre>
+  </div>
 
-while i < 5 print i let i = i + 1</p> <p><strong>Conditions:</strong><br>let a = 10 if a > 5 print "Big"</p> </div>
+  <div class="section">
+    <h2>💼 Join Iron Companies</h2>
+    <p>Join our mission to build the future. As a team member, you earn <strong>IRON Credits</strong> for helping with code, design, and ideas.</p>
+    <p>At the end of the year, IRON Credits are converted into real money and paid to all loyal members.</p>
+    <p>It’s not just a company — it’s a movement. Are you ready to build with us?</p>
+    <a href="mailto:morrarth5656@gmail.com" class="join-link">📧 Join Iron Companies Now</a>
+  </div>
 
-  </div>  <script>
+  <footer>© 2025 Iron Companies. Built by Morris Arthur. All rights reserved.</footer>
+
+  <script>
     function runIronscript() {
-      const code = document.getElementById("code").value;
-      const output = document.getElementById("output");
-      const lines = code.split("\n");
-      let env = {};
-      let result = "";
-      for (let line of lines) {
-        line = line.trim();
-        if (line.startsWith("let ")) {
-          const parts = line.slice(4).split("=");
-          const key = parts[0].trim();
-          const val = eval(parts[1].trim());
-          env[key] = val;
-        } else if (line.startsWith("print ")) {
-          const val = line.slice(6).trim();
-          result += (env[val] !== undefined ? env[val] : val.replaceAll('"','')) + "\n";
-        }
+      const input = document.getElementById("ironscriptInput").value;
+      const output = document.getElementById("ironscriptOutput");
+
+      // Placeholder: Replace this logic with your real Ironscript interpreter
+      if (input.includes("say")) {
+        const message = input.match(/say\s+"([^"]+)"/);
+        output.textContent = message ? message[1] : "// No valid say command.";
+      } else {
+        output.textContent = "// Ironscript interpreter not fully connected.";
       }
-      output.innerText = result;
     }
-  </script></body>
+  </script>
+</body>
 </html>
